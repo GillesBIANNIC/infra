@@ -29,7 +29,7 @@ services:
             - PUID=0
             - PGID=0
         volumes:
-            - /srv/deluge:/config
+            - /home/gillou/deluge:/config
             - /etc/localtime:/etc/localtime:ro
         expose:
             - "8112"
@@ -55,7 +55,7 @@ services:
             - MONGODB_BASE=kraken
             - NODE_ENV=production
         volumes:
-            - /srv/deluge/Downloads:/usr/src/app/mount
+            - /home/gillou/deluge/Downloads:/usr/src/app/mount
         expose:
             - "80"
         depends_on:
